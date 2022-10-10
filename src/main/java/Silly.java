@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Objects;
 
 /**
  * This file contains a few exercises to familiarize you with specific
@@ -162,10 +163,7 @@ public class Silly implements Comparable<Silly>{
 
         // Hint: to compare strings, we need to use .equals()
         //       e.g. s1.equals(s2)
-        if (this.name == ((Silly) o).name) {
-            return true;
-        }
-        return false;
+        return Objects.equals(this.name, ((Silly) o).name);
     }
 
     /**
