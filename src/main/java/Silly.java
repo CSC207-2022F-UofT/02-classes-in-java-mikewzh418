@@ -117,7 +117,7 @@ public class Silly implements Comparable<Silly>{
         y.countStatic();
         x.countStatic();
         x.countStatic();
-        int[] expected_values = {1,1,2,3};
+        int[] expected_values = {0,1,2,3};
 
         System.out.println("The countStatic calls will return " + Arrays.toString(expected_values));
     }
@@ -215,5 +215,14 @@ public class Silly implements Comparable<Silly>{
      *                If the tests don't pass, look at the results and revise
      *                accordingly.
      */
+}
+class A {
+    void func(double d) {
+        System.out.println(d);
+    }
+
+    void func(String s) {
+        System.out.println(s);
+    }
 }
 
